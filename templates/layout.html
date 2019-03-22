@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		{% if title %}
+			<title>{{ title }}</title>
+		{% else %}
+			<title>Shop</title>
+		{% endif %}
+
+		<meta charset="UTF-8">
+
+		<link rel="stylesheet" href="static\style.css">
+		<!---<link rel=stylesheet type=text/css
+		href="{{ url_for('static', filename='style.css') }}">--->
+	</head>
+
+	<body>
+		<nav>
+			<ul>
+				<li><a href="Home">Shop</a></li>
+				<li><a href="About">About</a></li>
+				<li><a href="Login">Log In</a></li>
+				<li><a href="Signup">Sign Up</a></li>
+			</ul>
+		</nav>
+		{% block content %}
+		{% endblock %}
+	</br>
+	</br>
+	</br>
+		<footer>
+			All Rights Reserved
+		</footer>
+	</body>
+</html>
